@@ -1,13 +1,13 @@
 import os
-from flask import Flask # importing flask class
-
-# Creating an instance of this class, storing in variable "app"
-app = Flask(__name__) # built-in python variable
+from flask import Flask, render_template 
 
 
-@app.route("/") # decorator (a way of passing objects)
+app = Flask(__name__) 
+
+
+@app.route("/") 
 def index():
-    return "Hello, World"
+    return render_template("index.html")
 
 
 if __name__ == "__main__":
